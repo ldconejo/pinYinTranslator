@@ -9,7 +9,7 @@ def readSourceFile():
         #print line
         #Check if the line contains a Unicode character matching the range of Chinese characters
         #result = re.match(".*htm.*",line)
-        result = re.search(u'[\u00d8-\u00f6]', line)
+        result = re.search(u'[*\u00d8-\u00f6*]', line)
         if result:
             result = re.findall(u'[\u00d8-\u00f6]', line)
             print result
