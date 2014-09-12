@@ -4,23 +4,30 @@
 
 import urllib2
 import re
+import goslate
 
-proxy = urllib2.ProxyHandler({''})
+#Proxy setup
+proxy = urllib2.ProxyHandler({'http': 'proxy01.sc.intel.com:911'})
 opener = urllib2.build_opener(proxy)
 urllib2.install_opener(opener)
+
+#Proxy setup for translator
+gs = goslate.Goslate(opener=opener)
+
 response = urllib2.urlopen('http://www.xinhuanet.com/')
 
-#p = re.compile('[\u4E00-\u9FA0]')
+#for line in response.readlines():
+#    line = unicode(line, 'utf-8')
+#    for n in re.findall(ur'[\u4e00-\u9fff]', line):
 
+        #Perform online translation
+#        print "RESULT:" + n
+#        english = gs.translate(n, 'en')
+#        print "TRANSLATION:" + english
 
-for line in response.readlines():
-    print line
-    #line = u'<title>新华网_传播中国 报道世界</title>'
-    #line = u'%r' % line
-    line = unicode(line, 'utf-8')
-    for n in re.findall(ur'[\u4e00-\u9fff]+', line):
-        print "RESULT:" + n
-    #result = p.findall(line)
-    #print unicode(result)
-
+#gs_roman = goslate.Goslate(writing='WRITING_ROMAN',opener=opener)
+WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
+gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN, opener=opener)
+result = gs_roman.translate("Dad", 'zh', )
+print result[1]
 
