@@ -6,6 +6,7 @@ import urllib2
 import re
 import goslate
 import sqlite3
+import webbrowser
 
 #######################################################################################################################
 # Database Functions
@@ -18,15 +19,14 @@ import sqlite3
 def initDatabase():
     c.execute('''CREATE TABLE myDictionary
              (chinese, pinyin, translation)''')
-    result = c.execute("""INSERT INTO myDictionary(chinese, pinyin, translation) VALUES (?, ?, ?)""", ('CONEJO', 'CONEJO', 'CONEJO'))
-    result = c.execute("""INSERT INTO myDictionary(chinese, pinyin, translation) VALUES (?, ?, ?)""", ('CONEJO2', 'CONEJO2', 'CONEJO2'))
 
 #######################################################################################################################
 # addRecord
 # Adds a new record to the database
 #######################################################################################################################
 def addRecord(chinese, pinyin, translation):
-    result = c.execute("""INSERT INTO myDictionary(chinese, translation, pinyin) VALUES (?, ?, ?)""", (chinese, translation, pinyin))
+    result = c.execute("""INSERT INTO myDictionary(chinese, translation, pinyin) VALUES (?, ?, ?)""",
+                       (chinese, translation, pinyin))
     conn.commit()
     return result
 #######################################################################################################################
@@ -35,9 +35,8 @@ def addRecord(chinese, pinyin, translation):
 #######################################################################################################################
 def searchRecord(chinese):
     c.execute('SELECT * FROM myDictionary WHERE chinese=?', chinese)
-    #c.execute('SELECT * FROM myDictionary')
+
     result = c.fetchone()
-    #print "RESULT:" + str(result)
 
     #If word is unknown, then do a web search
     if str(result) == "None":
@@ -47,8 +46,6 @@ def searchRecord(chinese):
         return (translation[0], translation[1])
     else:
         return (result[1], result[2])
-    #exit()
-    #return c.fetchone()
 
 #######################################################################################################################
 # searchWord(Chinese_Character)
@@ -62,10 +59,9 @@ def searchRecord(chinese):
 # Uses the Google Translate API to obtain the Pinyin word and English translation of a Chinese character
 #######################################################################################################################
 def searchInWeb(cnChar):
-    #Proxy setup for translator
-    gs = goslate.Goslate(opener=opener)
+    gs = goslate.Goslate()
     WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
-    gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN, opener=opener)
+    gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN)
 
     #Perform online translation
     english = gs.translate(n, 'en')
@@ -83,17 +79,15 @@ try:
 except:
     pass
 
-#Proxy setup
-proxy = urllib2.ProxyHandler({'http': 'proxy01.sc.intel.com:911'})
-opener = urllib2.build_opener(proxy)
-urllib2.install_opener(opener)
-
-#Proxy setup for translator
-gs = goslate.Goslate(opener=opener)
 WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
-gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN, opener=opener)
 
-response = urllib2.urlopen('http://www.xinhuanet.com/')
+gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN)
+
+response = urllib2.urlopen('http://news.xinhuanet.com/health/2014-09/17/c_126994624.htm')
+
+#Create a new file to store the output
+workfile = '/Users/luisconejo/Desktop/test.html'
+f = open(workfile, 'w+')
 
 for line in response.readlines():
     #print line
@@ -108,4 +102,14 @@ for line in response.readlines():
         #Replace the character in the original line
         line = re.sub(n,finalLine + ' ',line)
 
-    print line
+    f.write(line.encode("UTF-8"))
+    #print line
+
+#Close output file
+print "INFO: Conversion completed"
+f.close()
+
+#Open output file in default browser
+new = 2
+url = 'file:///Users/luisconejo/Desktop/test.html'
+webbrowser.open(url,new=new)
