@@ -69,6 +69,43 @@ def searchInWeb(cnChar):
     return (english, result[1])
 
 #######################################################################################################################
+# improveDic(cnChar)
+# Makes modifications to the base Google translator-based dictionary, adding more elaborate definitions to
+# hovering text.
+#######################################################################################################################
+def improveDic():
+    dictFile = '/Users/luisconejo/Desktop/cedict_1_0_ts_utf-8_mdbg.txt'
+    pinyinDict = open(dictFile, 'r')
+    #dictLine = pinyinDict.read
+
+    for dictLine in pinyinDict.readlines():
+        #Look for lone character in line
+        dictLine = unicode(dictLine, 'utf-8')
+        for character in re.findall(ur'\s[\u4e00-\u9fff]\s', dictLine):
+            #print character
+            #Now, get the definition for the character
+            for definition in re.findall(ur'/.*/', dictLine):
+                definition = re.sub(ur'[//|<|>|\u4e00-\u9fff]', '|', definition)
+                updateRecord(character[1], definition)
+                pass
+                #print definition
+#######################################################################################################################
+# updateRecord
+# Updates a record in the database
+#######################################################################################################################
+def updateRecord(chinese, newDefinition):
+    c.execute('SELECT * FROM myDictionary WHERE chinese=?', chinese)
+    #c.execute('SELECT * FROM myDictionary')
+    result = c.fetchone()
+
+    #If word is unknown, then ignore
+    if str(result) == "None":
+        print "NO MATCH"
+    else:
+        c.execute('UPDATE myDictionary SET pinyin=? WHERE chinese=?', (newDefinition, chinese))
+        conn.commit()
+        print "INFO: RECORD UPDATED: " + chinese + " " + newDefinition
+#######################################################################################################################
 # MAIN FLOW
 #######################################################################################################################
 #Start database
@@ -83,7 +120,7 @@ WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
 
 gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN)
 
-response = urllib2.urlopen('http://news.xinhuanet.com/health/2014-09/17/c_126994624.htm')
+response = urllib2.urlopen('http://www.bbc.co.uk/zhongwen/simp')
 
 #Create a new file to store the output
 workfile = '/Users/luisconejo/Desktop/test.html'
@@ -101,9 +138,10 @@ for line in response.readlines():
 
         #Replace the character in the original line
         line = re.sub(n,finalLine + ' ',line)
+        #print line
 
     f.write(line.encode("UTF-8"))
-    #print line
+    print line
 
 #Close output file
 print "INFO: Conversion completed"
@@ -112,4 +150,7 @@ f.close()
 #Open output file in default browser
 new = 2
 url = 'file:///Users/luisconejo/Desktop/test.html'
+
 webbrowser.open(url,new=new)
+
+#improveDic()
