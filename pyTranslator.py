@@ -7,6 +7,8 @@ import re
 import goslate
 import sqlite3
 import webbrowser
+import os
+import time
 
 #######################################################################################################################
 # Database Functions
@@ -59,9 +61,15 @@ def searchRecord(chinese):
 # Uses the Google Translate API to obtain the Pinyin word and English translation of a Chinese character
 #######################################################################################################################
 def searchInWeb(cnChar):
-    gs = goslate.Goslate()
+
+    #Proxy setup for translator
+    gs = goslate.Goslate(opener=opener)
     WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
-    gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN)
+    gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN, opener=opener)
+
+    #gs = goslate.Goslate()
+    #WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
+    #gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN)
 
     #Perform online translation
     english = gs.translate(n, 'en')
@@ -74,7 +82,8 @@ def searchInWeb(cnChar):
 # hovering text.
 #######################################################################################################################
 def improveDic():
-    dictFile = '/Users/luisconejo/Desktop/cedict_1_0_ts_utf-8_mdbg.txt'
+    #dictFile = '/Users/luisconejo/Desktop/cedict_1_0_ts_utf-8_mdbg.txt'
+    dictFile = os.getcwd() + '\cedict_ts.u8'
     pinyinDict = open(dictFile, 'r')
     #dictLine = pinyinDict.read
 
@@ -102,9 +111,17 @@ def updateRecord(chinese, newDefinition):
     if str(result) == "None":
         print "NO MATCH"
     else:
-        c.execute('UPDATE myDictionary SET pinyin=? WHERE chinese=?', (newDefinition, chinese))
-        conn.commit()
-        print "INFO: RECORD UPDATED: " + chinese + " " + newDefinition
+        if(result[0] == chinese)and(result[1] != newDefinition):
+            print "RESULT: " + result[0] + result[1]
+            try:
+                c.execute('UPDATE myDictionary SET pinyin=? WHERE chinese=?', (newDefinition, chinese))
+                conn.commit()
+            except:
+                pass
+            print "INFO: RECORD UPDATED: " + chinese + " " + newDefinition
+        #time.sleep(1)
+    result = None
+
 #######################################################################################################################
 # MAIN FLOW
 #######################################################################################################################
@@ -116,14 +133,25 @@ try:
 except:
     pass
 
+#Proxy setup
+proxy = urllib2.ProxyHandler({'http': 'proxy01.sc.intel.com:911'})
+opener = urllib2.build_opener(proxy)
+urllib2.install_opener(opener)
+
+#Proxy setup for translator
+gs = goslate.Goslate(opener=opener)
+WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
+gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN, opener=opener)
+
 WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
 
 gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN)
 
-response = urllib2.urlopen('http://www.bbc.co.uk/zhongwen/simp')
+#response = urllib2.urlopen('http://www.bbc.co.uk/zhongwen/simp')
+response = urllib2.urlopen('http://chinesereadingpractice.com/2013/08/05/mr-pigs-picnic/')
 
 #Create a new file to store the output
-workfile = '/Users/luisconejo/Desktop/test.html'
+workfile = 'test.html'
 f = open(workfile, 'w+')
 
 for line in response.readlines():
@@ -147,9 +175,16 @@ for line in response.readlines():
 print "INFO: Conversion completed"
 f.close()
 
+#Get current work directory
+currentDir = os.getcwd()
+
+#Convert to web format
+currentDir = re.sub(r'([\\])', '/', currentDir)
+print "CURRENT DIR:" + currentDir
+
 #Open output file in default browser
 new = 2
-url = 'file:///Users/luisconejo/Desktop/test.html'
+url = 'file:///' + currentDir + '/test.html'
 
 webbrowser.open(url,new=new)
 
