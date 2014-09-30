@@ -85,7 +85,7 @@ def improveDic():
             #print character
             #Now, get the definition for the character
             for definition in re.findall(ur'/.*/', dictLine):
-                definition = re.sub(ur'[//|<|>|\u4e00-\u9fff]', '\n', definition)
+                definition = re.sub(ur'[//|<|>|\u4e00-\u9fff]', '|', definition)
                 updateRecord(character[1], definition)
                 pass
                 #print definition
