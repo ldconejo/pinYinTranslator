@@ -94,7 +94,7 @@ def improveDic():
             #print character
             #Now, get the definition for the character
             for definition in re.findall(ur'/.*/', dictLine):
-                definition = re.sub(ur'[//|<|>|\u4e00-\u9fff]', '|', definition)
+                definition = re.sub(ur'[//|<|>|\u4e00-\u9fff]', '\n', definition)
                 updateRecord(character[1], definition)
                 pass
                 #print definition
@@ -147,8 +147,8 @@ WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
 
 gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN)
 
-#response = urllib2.urlopen('http://www.bbc.co.uk/zhongwen/simp')
-response = urllib2.urlopen('http://chinesereadingpractice.com/2013/08/05/mr-pigs-picnic/')
+response = urllib2.urlopen('http://www.bbc.co.uk/zhongwen/simp')
+#response = urllib2.urlopen('http://chinesereadingpractice.com/2013/08/05/mr-pigs-picnic/')
 
 #Create a new file to store the output
 workfile = 'test.html'
