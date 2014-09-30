@@ -85,7 +85,7 @@ def improveDic():
             #print character
             #Now, get the definition for the character
             for definition in re.findall(ur'/.*/', dictLine):
-                definition = re.sub(ur'[//|<|>|\u4e00-\u9fff]', '|', definition)
+                definition = re.sub(ur'[//|<|>|\u4e00-\u9fff]', '\n', definition)
                 updateRecord(character[1], definition)
                 pass
                 #print definition
@@ -141,7 +141,7 @@ for line in response.readlines():
         #print line
 
     f.write(line.encode("UTF-8"))
-    #print line
+    print line
 
 #Close output file
 print "INFO: Conversion completed"
