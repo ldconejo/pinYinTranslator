@@ -1,0 +1,822 @@
+﻿<html lang="en">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-style-type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Develop once, publish everywhere! Unity is the ultimate tool for video game development, architectural visualizations, and interactive media installations - publish to the web, Windows, OS X, Wii, Xbox 360, and iPhone with many more platforms to come.">
+    <meta name="author" content="Unity Technologies">
+    <link rel="shortcut icon" href="http://unity3d.com/resources/favicons/favicon.ico">
+    <link rel="icon" type="image/png" href="http://unity3d.com/resources/favicons/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://unity3d.com/resources/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://unity3d.com/resources/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://unity3d.com/resources/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="http://unity3d.com/resources/favicons/apple-touch-icon.png">
+    <link rel="stylesheet" href="../StaticFiles/code.css" type="text/css">
+    <link rel="stylesheet" href="../StaticFiles/docs.css" type="text/css"><script src="../StaticFiles/jQuery.js" type="text/javascript"></script><script src="../StaticFiles/core.js" type="text/javascript"></script><script src="../StaticFiles/SelectCodeSample.js" type="text/javascript"></script><script src="../StaticFiles/SelectCategory.js" type="text/javascript"></script><script type="text/javascript">
+    
+    function loadPage(memberID, params) {
+      var paramString = params ? ('?' + params) : "";
+	    window.location.assign(memberID + '.html' + paramString);
+    }
+    
+    $(function() {
+      var lang = getLanguage();
+      document.getElementById("langMenu").selectedIndex = lang;
+      setLanguage(lang);
+      
+      var category = getCategory();
+      document.getElementById("catMenu").selectedIndex = category;
+      setCategory(category);
+    });
+    
+  </script><title>Unity Script Reference: </title>
+  </head>
+  <body>
+    <div id="master-header" class="master-header" role="main-header">
+      <div class="header-wrapper">
+        <div class="top-nav">
+          <ul>
+            <li class="tn-icon"><a href="http://unity3d.com">Home</a></li>
+            <li class="tn-unity"><a href="http://unity3d.com/unity">Unity</a></li>
+            <li class="tn-gallery"><a href="http://unity3d.com/gallery">Gallery</a></li>
+            <li class="tn-assetstore"><a href="http://unity3d.com/asset-store">Asset Store</a></li>
+            <li class="tn-learn"><a href="http://unity3d.com/learn" class="selected">Learn</a></li>
+            <li class="tn-community"><a href="http://unity3d.com/community">Community</a></li>
+            <li class="tn-company"><a href="http://unity3d.com/company">Company</a></li>
+            <li class="tn-download"><a href="http://unity3d.com/unity/download">Download</a></li>
+            <li class="tn-store"><a href="http://unity3d.com/store">Buy</a></li>
+          </ul>
+        </div>
+        <div class="sub-nav">
+          <ul class="secondary-menu">
+            <li><a href="http://unity3d.com/learn/tutorials">Tutorials</a></li>
+            <li><a href="http://unity3d.com/learn/documentation" class="selected">Documentation</a></li>
+            <li><a href="http://unity3d.com/learn/live-training/">Live Training</a></li>
+            <li><a href="http://unity3d.com/learn/premium-support/">Premium Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section-nav">
+      <div class="g12">
+        <ul>
+          <li class="Overview"><a href="http://unity3d.com/learn/documentation">Overview</a></li>
+          <li class="Scripting"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor manual">Manual</a></li>
+          <li class="Scripting"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor reference">Reference</a></li>
+          <li class="Scripting"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor script">Scripting</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="breadcrumbs">
+      <div class="content">
+        <div class="path">
+          <form id="langSelect"><label for="langMenu">Scripting Reference using </label><select name="langMenu" id="langMenu" onchange="setLanguage(document.getElementById(&quot;langMenu&quot;).selectedIndex)"><option>JavaScript</option>
+              <option>C#</option>
+              <option>Boo</option></select></form>
+        </div>
+        <div class="switch"><a href="../Components/class-GUIElement.html">View component details</a></div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="scriprefmain">
+      <div class="left-menu-container">
+        <ul class="left-menu">
+          <li>
+            <form class="apisearch" action="30_search.html" method="GET"><input type="search" name="q" placeholder="Search" autosave="Unity Reference" results="5" class="sbox" id="q"><script type="text/javascript" language="JavaScript"></script></form>
+          </li>
+          <li>
+            <form id="catSelect"><select name="catMenu" id="catMenu" onchange="setCategory(document.getElementById(&quot;catMenu&quot;).selectedIndex)"><option>Runtime Classes</option>
+                <option>Runtime Enumerations</option>
+                <option>Runtime Attributes</option>
+                <option>Editor Classes</option>
+                <option>Editor Enumerations</option>
+                <option>Editor Attributes</option></select></form>
+          </li>
+          <li class="classRuntime"><a href="AccelerationEvent.html">AccelerationEvent</a></li>
+          <li class="classRuntime"><a href="ADBannerView.html">ADBannerView</a></li>
+          <li class="classRuntime"><a href="ADInterstitialAd.html">ADInterstitialAd</a></li>
+          <li class="classRuntime"><a href="AndroidInput.html">AndroidInput</a></li>
+          <li class="classRuntime"><a href="AndroidJavaObject.html">AndroidJavaObject</a><ul class="left-submenu">
+      <li class="classRuntime"><a href="AndroidJavaClass.html">AndroidJavaClass</a></li>
+    </ul>
+          </li>
+          <li class="classRuntime"><a href="AndroidJavaProxy.html">AndroidJavaProxy</a></li>
+          <li class="classRuntime"><a href="AndroidJavaRunnable.html">AndroidJavaRunnable</a></li>
+          <li class="classRuntime"><a href="AndroidJNI.html">AndroidJNI</a></li>
+          <li class="classRuntime"><a href="AndroidJNIHelper.html">AndroidJNIHelper</a></li>
+          <li class="classRuntime"><a href="AnimationClip.html">AnimationClip</a></li>
+          <li class="classRuntime"><a href="AnimationClipPair.html">AnimationClipPair</a></li>
+          <li class="classRuntime"><a href="AnimationCurve.html">AnimationCurve</a></li>
+          <li class="classRuntime"><a href="AnimationEvent.html">AnimationEvent</a></li>
+          <li class="classRuntime"><a href="AnimationInfo.html">AnimationInfo</a></li>
+          <li class="classRuntime"><a href="AnimationState.html">AnimationState</a></li>
+          <li class="classRuntime"><a href="AnimatorStateInfo.html">AnimatorStateInfo</a></li>
+          <li class="classRuntime"><a href="AnimatorTransitionInfo.html">AnimatorTransitionInfo</a></li>
+          <li class="classRuntime"><a href="Application.html">Application</a></li>
+          <li class="classRuntime"><a href="AssetBundle.html">AssetBundle</a></li>
+          <li class="classRuntime"><a href="AudioClip.html">AudioClip</a></li>
+          <li class="classRuntime"><a href="AudioSettings.html">AudioSettings</a></li>
+          <li class="classRuntime"><a href="Avatar.html">Avatar</a></li>
+          <li class="classRuntime"><a href="AvatarBuilder.html">AvatarBuilder</a></li>
+          <li class="classRuntime"><a href="BitStream.html">BitStream</a></li>
+          <li class="classRuntime"><a href="BoneWeight.html">BoneWeight</a></li>
+          <li class="classRuntime"><a href="Bounds.html">Bounds</a></li>
+          <li class="classRuntime"><a href="Caching.html">Caching</a></li>
+          <li class="classRuntime"><a href="CharacterInfo.html">CharacterInfo</a></li>
+          <li class="classRuntime"><a href="ClothSkinningCoefficient.html">ClothSkinningCoefficient</a></li>
+          <li class="classRuntime"><a href="Collision.html">Collision</a></li>
+          <li class="classRuntime"><a href="Collision2D.html">Collision2D</a></li>
+          <li class="classRuntime"><a href="Color.html">Color</a></li>
+          <li class="classRuntime"><a href="Color32.html">Color32</a></li>
+          <li class="classRuntime"><a href="CombineInstance.html">CombineInstance</a></li>
+          <li class="classRuntime"><a href="Compass.html">Compass</a></li>
+          <li class="classRuntime"><a href="Component.html">Component</a><ul class="left-submenu">
+      <li class="classRuntime"><a href="Behaviour.html">Behaviour</a><ul class="left-submenu">
+        <li class="classRuntime"><a href="Animation.html">Animation</a></li>
+        <li class="classRuntime"><a href="Animator.html">Animator</a></li>
+        <li class="classRuntime"><a href="AudioChorusFilter.html">AudioChorusFilter</a></li>
+        <li class="classRuntime"><a href="AudioDistortionFilter.html">AudioDistortionFilter</a></li>
+        <li class="classRuntime"><a href="AudioEchoFilter.html">AudioEchoFilter</a></li>
+        <li class="classRuntime"><a href="AudioHighPassFilter.html">AudioHighPassFilter</a></li>
+        <li class="classRuntime"><a href="AudioListener.html">AudioListener</a></li>
+        <li class="classRuntime"><a href="AudioLowPassFilter.html">AudioLowPassFilter</a></li>
+        <li class="classRuntime"><a href="AudioReverbFilter.html">AudioReverbFilter</a></li>
+        <li class="classRuntime"><a href="AudioReverbZone.html">AudioReverbZone</a></li>
+        <li class="classRuntime"><a href="AudioSource.html">AudioSource</a></li>
+        <li class="classRuntime"><a href="Camera.html">Camera</a></li>
+        <li class="classRuntime"><a href="Collider2D.html">Collider2D</a><ul class="left-submenu">
+          <li class="classRuntime"><a href="BoxCollider2D.html">BoxCollider2D</a></li>
+          <li class="classRuntime"><a href="CircleCollider2D.html">CircleCollider2D</a></li>
+          <li class="classRuntime"><a href="EdgeCollider2D.html">EdgeCollider2D</a></li>
+          <li class="classRuntime"><a href="PolygonCollider2D.html">PolygonCollider2D</a></li>
+        </ul>
+                  </li>
+        <li class="classRuntime"><a href="ConstantForce.html">ConstantForce</a></li>
+        <li class="classRuntime"><a href="GUIElement.html">GUIElement</a><ul class="left-submenu">
+          <li class="classRuntime"><a href="GUIText.html">GUIText</a></li>
+          <li class="classRuntime"><a href="GUITexture.html">GUITexture</a></li>
+        </ul>
+                  </li>
+        <li class="classRuntime"><a href="GUILayer.html">GUILayer</a></li>
+        <li class="classRuntime"><a href="Joint2D.html">Joint2D</a><ul class="left-submenu">
+          <li class="classRuntime"><a href="DistanceJoint2D.html">DistanceJoint2D</a></li>
+          <li class="classRuntime"><a href="HingeJoint2D.html">HingeJoint2D</a></li>
+          <li class="classRuntime"><a href="SliderJoint2D.html">SliderJoint2D</a></li>
+          <li class="classRuntime"><a href="SpringJoint2D.html">SpringJoint2D</a></li>
+        </ul>
+                  </li>
+        <li class="classRuntime"><a href="LensFlare.html">LensFlare</a></li>
+        <li class="classRuntime"><a href="Light.html">Light</a></li>
+        <li class="classRuntime"><a href="MonoBehaviour.html">MonoBehaviour</a><ul class="left-submenu">
+          <li class="classRuntime"><a href="Terrain.html">Terrain</a></li>
+        </ul>
+                  </li>
+        <li class="classRuntime"><a href="NavMeshAgent.html">NavMeshAgent</a></li>
+        <li class="classRuntime"><a href="NavMeshObstacle.html">NavMeshObstacle</a></li>
+        <li class="classRuntime"><a href="NetworkView.html">NetworkView</a></li>
+        <li class="classRuntime"><a href="Projector.html">Projector</a></li>
+        <li class="classRuntime"><a href="Skybox.html">Skybox</a></li>
+      </ul>
+              </li>
+      <li class="classRuntime"><a href="Cloth.html">Cloth</a><ul class="left-submenu">
+        <li class="classRuntime"><a href="InteractiveCloth.html">InteractiveCloth</a></li>
+        <li class="classRuntime"><a href="SkinnedCloth.html">SkinnedCloth</a></li>
+      </ul>
+              </li>
+      <li class="classRuntime"><a href="Collider.html">Collider</a><ul class="left-submenu">
+        <li class="classRuntime"><a href="BoxCollider.html">BoxCollider</a></li>
+        <li class="classRuntime"><a href="CapsuleCollider.html">CapsuleCollider</a></li>
+        <li class="classRuntime"><a href="CharacterController.html">CharacterController</a></li>
+        <li class="classRuntime"><a href="MeshCollider.html">MeshCollider</a></li>
+        <li class="classRuntime"><a href="SphereCollider.html">SphereCollider</a></li>
+        <li class="classRuntime"><a href="TerrainCollider.html">TerrainCollider</a></li>
+        <li class="classRuntime"><a href="WheelCollider.html">WheelCollider</a></li>
+      </ul>
+              </li>
+      <li class="classRuntime"><a href="Joint.html">Joint</a><ul class="left-submenu">
+        <li class="classRuntime"><a href="CharacterJoint.html">CharacterJoint</a></li>
+        <li class="classRuntime"><a href="ConfigurableJoint.html">ConfigurableJoint</a></li>
+        <li class="classRuntime"><a href="FixedJoint.html">FixedJoint</a></li>
+        <li class="classRuntime"><a href="HingeJoint.html">HingeJoint</a></li>
+        <li class="classRuntime"><a href="SpringJoint.html">SpringJoint</a></li>
+      </ul>
+              </li>
+      <li class="classRuntime"><a href="LightProbeGroup.html">LightProbeGroup</a></li>
+      <li class="classRuntime"><a href="LODGroup.html">LODGroup</a></li>
+      <li class="classRuntime"><a href="MeshFilter.html">MeshFilter</a></li>
+      <li class="classRuntime"><a href="OcclusionArea.html">OcclusionArea</a></li>
+      <li class="classRuntime"><a href="OcclusionPortal.html">OcclusionPortal</a></li>
+      <li class="classRuntime"><a href="OffMeshLink.html">OffMeshLink</a></li>
+      <li class="classRuntime"><a href="ParticleAnimator.html">ParticleAnimator</a></li>
+      <li class="classRuntime"><a href="ParticleEmitter.html">ParticleEmitter</a></li>
+      <li class="classRuntime"><a href="ParticleSystem.html">ParticleSystem</a></li>
+      <li class="classRuntime"><a href="Renderer.html">Renderer</a><ul class="left-submenu">
+        <li class="classRuntime"><a href="ClothRenderer.html">ClothRenderer</a></li>
+        <li class="classRuntime"><a href="LineRenderer.html">LineRenderer</a></li>
+        <li class="classRuntime"><a href="MeshRenderer.html">MeshRenderer</a></li>
+        <li class="classRuntime"><a href="ParticleRenderer.html">ParticleRenderer</a></li>
+        <li class="classRuntime"><a href="ParticleSystemRenderer.html">ParticleSystemRenderer</a></li>
+        <li class="classRuntime"><a href="SkinnedMeshRenderer.html">SkinnedMeshRenderer</a></li>
+        <li class="classRuntime"><a href="SpriteRenderer.html">SpriteRenderer</a></li>
+        <li class="classRuntime"><a href="TrailRenderer.html">TrailRenderer</a></li>
+      </ul>
+              </li>
+      <li class="classRuntime"><a href="Rigidbody.html">Rigidbody</a></li>
+      <li class="classRuntime"><a href="Rigidbody2D.html">Rigidbody2D</a></li>
+      <li class="classRuntime"><a href="TextMesh.html">TextMesh</a></li>
+      <li class="classRuntime"><a href="Transform.html">Transform</a></li>
+      <li class="classRuntime"><a href="Tree.html">Tree</a></li>
+    </ul>
+          </li>
+          <li class="classRuntime"><a href="ComputeBuffer.html">ComputeBuffer</a></li>
+          <li class="classRuntime"><a href="ComputeShader.html">ComputeShader</a></li>
+          <li class="classRuntime"><a href="ContactPoint.html">ContactPoint</a></li>
+          <li class="classRuntime"><a href="ContactPoint2D.html">ContactPoint2D</a></li>
+          <li class="classRuntime"><a href="ControllerColliderHit.html">ControllerColliderHit</a></li>
+          <li class="classRuntime"><a href="CrashReport.html">CrashReport</a></li>
+          <li class="classRuntime"><a href="Cursor.html">Cursor</a></li>
+          <li class="classRuntime"><a href="Debug.html">Debug</a></li>
+          <li class="classRuntime"><a href="DetailPrototype.html">DetailPrototype</a></li>
+          <li class="classRuntime"><a href="Display.html">Display</a></li>
+          <li class="classRuntime"><a href="Event.html">Event</a></li>
+          <li class="classRuntime"><a href="Flare.html">Flare</a></li>
+          <li class="classRuntime"><a href="Flash.ActionScript.html">Flash.ActionScript</a></li>
+          <li class="classRuntime"><a href="Flash.FlashPlayer.html">Flash.FlashPlayer</a></li>
+          <li class="classRuntime"><a href="Font.html">Font</a></li>
+          <li class="classRuntime"><a href="GameObject.html">GameObject</a></li>
+          <li class="classRuntime"><a href="GeometryUtility.html">GeometryUtility</a></li>
+          <li class="classRuntime"><a href="Gizmos.html">Gizmos</a></li>
+          <li class="classRuntime"><a href="GL.html">GL</a></li>
+          <li class="classRuntime"><a href="Gradient.html">Gradient</a></li>
+          <li class="classRuntime"><a href="GradientAlphaKey.html">GradientAlphaKey</a></li>
+          <li class="classRuntime"><a href="GradientColorKey.html">GradientColorKey</a></li>
+          <li class="classRuntime"><a href="Graphics.html">Graphics</a></li>
+          <li class="classRuntime"><a href="GUI.html">GUI</a></li>
+          <li class="classRuntime"><a href="GUIContent.html">GUIContent</a></li>
+          <li class="classRuntime"><a href="GUILayout.html">GUILayout</a></li>
+          <li class="classRuntime"><a href="GUILayoutOption.html">GUILayoutOption</a></li>
+          <li class="classRuntime"><a href="GUILayoutUtility.html">GUILayoutUtility</a></li>
+          <li class="classRuntime"><a href="GUISettings.html">GUISettings</a></li>
+          <li class="classRuntime"><a href="GUIStyle.html">GUIStyle</a></li>
+          <li class="classRuntime"><a href="GUIStyleState.html">GUIStyleState</a></li>
+          <li class="classRuntime"><a href="GUIUtility.html">GUIUtility</a></li>
+          <li class="classRuntime"><a href="Gyroscope.html">Gyroscope</a></li>
+          <li class="classRuntime"><a href="Handheld.html">Handheld</a></li>
+          <li class="classRuntime"><a href="HostData.html">HostData</a></li>
+          <li class="classRuntime"><a href="HumanBone.html">HumanBone</a></li>
+          <li class="classRuntime"><a href="HumanDescription.html">HumanDescription</a></li>
+          <li class="classRuntime"><a href="HumanLimit.html">HumanLimit</a></li>
+          <li class="classRuntime"><a href="HumanTrait.html">HumanTrait</a></li>
+          <li class="classRuntime"><a href="Input.html">Input</a></li>
+          <li class="classRuntime"><a href="iPhone.html">iPhone</a></li>
+          <li class="classRuntime"><a href="JointAngleLimits2D.html">JointAngleLimits2D</a></li>
+          <li class="classRuntime"><a href="JointDrive.html">JointDrive</a></li>
+          <li class="classRuntime"><a href="JointLimits.html">JointLimits</a></li>
+          <li class="classRuntime"><a href="JointMotor.html">JointMotor</a></li>
+          <li class="classRuntime"><a href="JointMotor2D.html">JointMotor2D</a></li>
+          <li class="classRuntime"><a href="JointSpring.html">JointSpring</a></li>
+          <li class="classRuntime"><a href="JointTranslationLimits2D.html">JointTranslationLimits2D</a></li>
+          <li class="classRuntime"><a href="Keyframe.html">Keyframe</a></li>
+          <li class="classRuntime"><a href="LayerMask.html">LayerMask</a></li>
+          <li class="classRuntime"><a href="LightmapData.html">LightmapData</a></li>
+          <li class="classRuntime"><a href="LightmapSettings.html">LightmapSettings</a></li>
+          <li class="classRuntime"><a href="LightProbes.html">LightProbes</a></li>
+          <li class="classRuntime"><a href="LocalNotification.html">LocalNotification</a></li>
+          <li class="classRuntime"><a href="LocationInfo.html">LocationInfo</a></li>
+          <li class="classRuntime"><a href="LocationService.html">LocationService</a></li>
+          <li class="classRuntime"><a href="LOD.html">LOD</a></li>
+          <li class="classRuntime"><a href="MasterServer.html">MasterServer</a></li>
+          <li class="classRuntime"><a href="MatchTargetWeightMask.html">MatchTargetWeightMask</a></li>
+          <li class="classRuntime"><a href="Material.html">Material</a><ul class="left-submenu">
+      <li class="classRuntime"><a href="ProceduralMaterial.html">ProceduralMaterial</a></li>
+    </ul>
+          </li>
+          <li class="classRuntime"><a href="MaterialPropertyBlock.html">MaterialPropertyBlock</a></li>
+          <li class="classRuntime"><a href="Mathf.html">Mathf</a></li>
+          <li class="classRuntime"><a href="Matrix4x4.html">Matrix4x4</a></li>
+          <li class="classRuntime"><a href="Mesh.html">Mesh</a></li>
+          <li class="classRuntime"><a href="Microphone.html">Microphone</a></li>
+          <li class="classRuntime"><a href="MovieTexture.html">MovieTexture</a></li>
+          <li class="classRuntime"><a href="NavMesh.html">NavMesh</a></li>
+          <li class="classRuntime"><a href="NavMeshHit.html">NavMeshHit</a></li>
+          <li class="classRuntime"><a href="NavMeshPath.html">NavMeshPath</a></li>
+          <li class="classRuntime"><a href="NavMeshTriangulation.html">NavMeshTriangulation</a></li>
+          <li class="classRuntime"><a href="Network.html">Network</a></li>
+          <li class="classRuntime"><a href="NetworkMessageInfo.html">NetworkMessageInfo</a></li>
+          <li class="classRuntime"><a href="NetworkPlayer.html">NetworkPlayer</a></li>
+          <li class="classRuntime"><a href="NetworkViewID.html">NetworkViewID</a></li>
+          <li class="classRuntime"><a href="NotificationServices.html">NotificationServices</a></li>
+          <li class="classRuntime"><a href="Object.html">Object</a></li>
+          <li class="classRuntime"><a href="OffMeshLinkData.html">OffMeshLinkData</a></li>
+          <li class="classRuntime"><a href="Particle.html">Particle</a></li>
+          <li class="classRuntime"><a href="ParticleSystem.CollisionEvent.html">ParticleSystem.CollisionEvent</a></li>
+          <li class="classRuntime"><a href="ParticleSystem.Particle.html">ParticleSystem.Particle</a></li>
+          <li class="classRuntime"><a href="PhysicMaterial.html">PhysicMaterial</a></li>
+          <li class="classRuntime"><a href="Physics.html">Physics</a></li>
+          <li class="classRuntime"><a href="Physics2D.html">Physics2D</a></li>
+          <li class="classRuntime"><a href="PhysicsMaterial2D.html">PhysicsMaterial2D</a></li>
+          <li class="classRuntime"><a href="Ping.html">Ping</a></li>
+          <li class="classRuntime"><a href="Plane.html">Plane</a></li>
+          <li class="classRuntime"><a href="PlayerPrefs.html">PlayerPrefs</a></li>
+          <li class="classRuntime"><a href="PlayerPrefsException.html">PlayerPrefsException</a></li>
+          <li class="classRuntime"><a href="PlayerSettings.Android.html">PlayerSettings.Android</a></li>
+          <li class="classRuntime"><a href="PlayerSettings.BlackBerry.html">PlayerSettings.BlackBerry</a></li>
+          <li class="classRuntime"><a href="PlayerSettings.iOS.html">PlayerSettings.iOS</a></li>
+          <li class="classRuntime"><a href="PlayerSettings.Wii.html">PlayerSettings.Wii</a></li>
+          <li class="classRuntime"><a href="ProceduralPropertyDescription.html">ProceduralPropertyDescription</a></li>
+          <li class="classRuntime"><a href="Profiler.html">Profiler</a></li>
+          <li class="classRuntime"><a href="QualitySettings.html">QualitySettings</a></li>
+          <li class="classRuntime"><a href="Quaternion.html">Quaternion</a></li>
+          <li class="classRuntime"><a href="Random.html">Random</a></li>
+          <li class="classRuntime"><a href="Ray.html">Ray</a></li>
+          <li class="classRuntime"><a href="Ray2D.html">Ray2D</a></li>
+          <li class="classRuntime"><a href="RaycastHit.html">RaycastHit</a></li>
+          <li class="classRuntime"><a href="RaycastHit2D.html">RaycastHit2D</a></li>
+          <li class="classRuntime"><a href="Rect.html">Rect</a></li>
+          <li class="classRuntime"><a href="RectOffset.html">RectOffset</a></li>
+          <li class="classRuntime"><a href="RemoteNotification.html">RemoteNotification</a></li>
+          <li class="classRuntime"><a href="RenderBuffer.html">RenderBuffer</a></li>
+          <li class="classRuntime"><a href="RenderSettings.html">RenderSettings</a></li>
+          <li class="classRuntime"><a href="Resolution.html">Resolution</a></li>
+          <li class="classRuntime"><a href="Resources.html">Resources</a></li>
+          <li class="classRuntime"><a href="RuntimeAnimatorController.html">RuntimeAnimatorController</a><ul class="left-submenu">
+      <li class="classRuntime"><a href="AnimatorOverrideController.html">AnimatorOverrideController</a></li>
+    </ul>
+          </li>
+          <li class="classRuntime"><a href="Screen.html">Screen</a></li>
+          <li class="classRuntime"><a href="ScriptableObject.html">ScriptableObject</a><ul class="left-submenu">
+      <li class="classRuntime"><a href="GUISkin.html">GUISkin</a></li>
+    </ul>
+          </li>
+          <li class="classRuntime"><a href="Security.html">Security</a></li>
+          <li class="classRuntime"><a href="Shader.html">Shader</a></li>
+          <li class="classRuntime"><a href="SkeletonBone.html">SkeletonBone</a></li>
+          <li class="classRuntime"><a href="SleepTimeout.html">SleepTimeout</a></li>
+          <li class="classRuntime"><a href="Social.html">Social</a></li>
+          <li class="classRuntime"><a href="SocialPlatforms.GameCenter.GameCenterPlatform.html">SocialPlatforms.GameCenter.GameCenterPlatform</a></li>
+          <li class="classRuntime"><a href="SocialPlatforms.IAchievement.html">SocialPlatforms.IAchievement</a></li>
+          <li class="classRuntime"><a href="SocialPlatforms.IAchievementDescription.html">SocialPlatforms.IAchievementDescription</a></li>
+          <li class="classRuntime"><a href="SocialPlatforms.ILeaderboard.html">SocialPlatforms.ILeaderboard</a></li>
+          <li class="classRuntime"><a href="SocialPlatforms.ILocalUser.html">SocialPlatforms.ILocalUser</a></li>
+          <li class="classRuntime"><a href="SocialPlatforms.IScore.html">SocialPlatforms.IScore</a></li>
+          <li class="classRuntime"><a href="SocialPlatforms.ISocialPlatform.html">SocialPlatforms.ISocialPlatform</a></li>
+          <li class="classRuntime"><a href="SocialPlatforms.IUserProfile.html">SocialPlatforms.IUserProfile</a></li>
+          <li class="classRuntime"><a href="SocialPlatforms.Range.html">SocialPlatforms.Range</a></li>
+          <li class="classRuntime"><a href="SoftJointLimit.html">SoftJointLimit</a></li>
+          <li class="classRuntime"><a href="SplatPrototype.html">SplatPrototype</a></li>
+          <li class="classRuntime"><a href="Sprite.html">Sprite</a></li>
+          <li class="classRuntime"><a href="StaticBatchingUtility.html">StaticBatchingUtility</a></li>
+          <li class="classRuntime"><a href="SystemInfo.html">SystemInfo</a></li>
+          <li class="classRuntime"><a href="TerrainData.html">TerrainData</a></li>
+          <li class="classRuntime"><a href="TextAsset.html">TextAsset</a></li>
+          <li class="classRuntime"><a href="Texture.html">Texture</a><ul class="left-submenu">
+      <li class="classRuntime"><a href="Cubemap.html">Cubemap</a></li>
+      <li class="classRuntime"><a href="ProceduralTexture.html">ProceduralTexture</a></li>
+      <li class="classRuntime"><a href="RenderTexture.html">RenderTexture</a></li>
+      <li class="classRuntime"><a href="Texture2D.html">Texture2D</a></li>
+      <li class="classRuntime"><a href="Texture3D.html">Texture3D</a></li>
+      <li class="classRuntime"><a href="WebCamTexture.html">WebCamTexture</a></li>
+    </ul>
+          </li>
+          <li class="classRuntime"><a href="Time.html">Time</a></li>
+          <li class="classRuntime"><a href="Touch.html">Touch</a></li>
+          <li class="classRuntime"><a href="TouchScreenKeyboard.html">TouchScreenKeyboard</a></li>
+          <li class="classRuntime"><a href="TreeInstance.html">TreeInstance</a></li>
+          <li class="classRuntime"><a href="TreePrototype.html">TreePrototype</a></li>
+          <li class="classRuntime"><a href="Vector2.html">Vector2</a></li>
+          <li class="classRuntime"><a href="Vector3.html">Vector3</a></li>
+          <li class="classRuntime"><a href="Vector4.html">Vector4</a></li>
+          <li class="classRuntime"><a href="WebCamDevice.html">WebCamDevice</a></li>
+          <li class="classRuntime"><a href="WheelFrictionCurve.html">WheelFrictionCurve</a></li>
+          <li class="classRuntime"><a href="WheelHit.html">WheelHit</a></li>
+          <li class="classRuntime"><a href="Windows.Crypto.html">Windows.Crypto</a></li>
+          <li class="classRuntime"><a href="Windows.Directory.html">Windows.Directory</a></li>
+          <li class="classRuntime"><a href="Windows.File.html">Windows.File</a></li>
+          <li class="classRuntime"><a href="WindowsPhone.Media.html">WindowsPhone.Media</a></li>
+          <li class="classRuntime"><a href="WSA.Application.html">WSA.Application</a></li>
+          <li class="classRuntime"><a href="WSA.SecondaryTileData.html">WSA.SecondaryTileData</a></li>
+          <li class="classRuntime"><a href="WSA.Tile.html">WSA.Tile</a></li>
+          <li class="classRuntime"><a href="WSA.Toast.html">WSA.Toast</a></li>
+          <li class="classRuntime"><a href="WSA.WindowActivated.html">WSA.WindowActivated</a></li>
+          <li class="classRuntime"><a href="WSA.WindowSizeChanged.html">WSA.WindowSizeChanged</a></li>
+          <li class="classRuntime"><a href="WWW.html">WWW</a></li>
+          <li class="classRuntime"><a href="WWWForm.html">WWWForm</a></li>
+          <li class="classRuntime"><a href="YieldInstruction.html">YieldInstruction</a><ul class="left-submenu">
+      <li class="classRuntime"><a href="AsyncOperation.html">AsyncOperation</a><ul class="left-submenu">
+        <li class="classRuntime"><a href="AssetBundleCreateRequest.html">AssetBundleCreateRequest</a></li>
+        <li class="classRuntime"><a href="AssetBundleRequest.html">AssetBundleRequest</a></li>
+      </ul>
+              </li>
+      <li class="classRuntime"><a href="Coroutine.html">Coroutine</a></li>
+      <li class="classRuntime"><a href="WaitForEndOfFrame.html">WaitForEndOfFrame</a></li>
+      <li class="classRuntime"><a href="WaitForFixedUpdate.html">WaitForFixedUpdate</a></li>
+      <li class="classRuntime"><a href="WaitForSeconds.html">WaitForSeconds</a></li>
+    </ul>
+          </li>
+          <li class="enumRuntime"><a href="ADBannerView.Layout.html">ADBannerView.Layout</a></li>
+          <li class="enumRuntime"><a href="ADBannerView.Type.html">ADBannerView.Type</a></li>
+          <li class="enumRuntime"><a href="AndroidActivityIndicatorStyle.html">AndroidActivityIndicatorStyle</a></li>
+          <li class="enumRuntime"><a href="AnimationBlendMode.html">AnimationBlendMode</a></li>
+          <li class="enumRuntime"><a href="AnimationCullingType.html">AnimationCullingType</a></li>
+          <li class="enumRuntime"><a href="AnimationUtility.CurveModifiedType.html">AnimationUtility.CurveModifiedType</a></li>
+          <li class="enumRuntime"><a href="AnimatorCullingMode.html">AnimatorCullingMode</a></li>
+          <li class="enumRuntime"><a href="AnisotropicFiltering.html">AnisotropicFiltering</a></li>
+          <li class="enumRuntime"><a href="Asset.States.html">Asset.States</a></li>
+          <li class="enumRuntime"><a href="AudioReverbPreset.html">AudioReverbPreset</a></li>
+          <li class="enumRuntime"><a href="AudioRolloffMode.html">AudioRolloffMode</a></li>
+          <li class="enumRuntime"><a href="AudioSpeakerMode.html">AudioSpeakerMode</a></li>
+          <li class="enumRuntime"><a href="AudioType.html">AudioType</a></li>
+          <li class="enumRuntime"><a href="AudioVelocityUpdateMode.html">AudioVelocityUpdateMode</a></li>
+          <li class="enumRuntime"><a href="AvatarIKGoal.html">AvatarIKGoal</a></li>
+          <li class="enumRuntime"><a href="AvatarTarget.html">AvatarTarget</a></li>
+          <li class="enumRuntime"><a href="BlendWeights.html">BlendWeights</a></li>
+          <li class="enumRuntime"><a href="CalendarIdentifier.html">CalendarIdentifier</a></li>
+          <li class="enumRuntime"><a href="CalendarUnit.html">CalendarUnit</a></li>
+          <li class="enumRuntime"><a href="CameraClearFlags.html">CameraClearFlags</a></li>
+          <li class="enumRuntime"><a href="CollisionDetectionMode.html">CollisionDetectionMode</a></li>
+          <li class="enumRuntime"><a href="CollisionDetectionMode2D.html">CollisionDetectionMode2D</a></li>
+          <li class="enumRuntime"><a href="CollisionFlags.html">CollisionFlags</a></li>
+          <li class="enumRuntime"><a href="ColorSpace.html">ColorSpace</a></li>
+          <li class="enumRuntime"><a href="ComputeBufferType.html">ComputeBufferType</a></li>
+          <li class="enumRuntime"><a href="ConfigurableJointMotion.html">ConfigurableJointMotion</a></li>
+          <li class="enumRuntime"><a href="ConnectionTesterStatus.html">ConnectionTesterStatus</a></li>
+          <li class="enumRuntime"><a href="CubemapFace.html">CubemapFace</a></li>
+          <li class="enumRuntime"><a href="CursorMode.html">CursorMode</a></li>
+          <li class="enumRuntime"><a href="DepthTextureMode.html">DepthTextureMode</a></li>
+          <li class="enumRuntime"><a href="DetailRenderMode.html">DetailRenderMode</a></li>
+          <li class="enumRuntime"><a href="DeviceOrientation.html">DeviceOrientation</a></li>
+          <li class="enumRuntime"><a href="DeviceType.html">DeviceType</a></li>
+          <li class="enumRuntime"><a href="EventModifiers.html">EventModifiers</a></li>
+          <li class="enumRuntime"><a href="EventType.html">EventType</a></li>
+          <li class="enumRuntime"><a href="FFTWindow.html">FFTWindow</a></li>
+          <li class="enumRuntime"><a href="FilterMode.html">FilterMode</a></li>
+          <li class="enumRuntime"><a href="FocusType.html">FocusType</a></li>
+          <li class="enumRuntime"><a href="FogMode.html">FogMode</a></li>
+          <li class="enumRuntime"><a href="FontStyle.html">FontStyle</a></li>
+          <li class="enumRuntime"><a href="ForceMode.html">ForceMode</a></li>
+          <li class="enumRuntime"><a href="FullScreenMovieControlMode.html">FullScreenMovieControlMode</a></li>
+          <li class="enumRuntime"><a href="FullScreenMovieScalingMode.html">FullScreenMovieScalingMode</a></li>
+          <li class="enumRuntime"><a href="HideFlags.html">HideFlags</a></li>
+          <li class="enumRuntime"><a href="HumanBodyBones.html">HumanBodyBones</a></li>
+          <li class="enumRuntime"><a href="ImagePosition.html">ImagePosition</a></li>
+          <li class="enumRuntime"><a href="IMECompositionMode.html">IMECompositionMode</a></li>
+          <li class="enumRuntime"><a href="iOSActivityIndicatorStyle.html">iOSActivityIndicatorStyle</a></li>
+          <li class="enumRuntime"><a href="iPhoneGeneration.html">iPhoneGeneration</a></li>
+          <li class="enumRuntime"><a href="JointDriveMode.html">JointDriveMode</a></li>
+          <li class="enumRuntime"><a href="JointProjectionMode.html">JointProjectionMode</a></li>
+          <li class="enumRuntime"><a href="KeyCode.html">KeyCode</a></li>
+          <li class="enumRuntime"><a href="LightmapsMode.html">LightmapsMode</a></li>
+          <li class="enumRuntime"><a href="LightRenderMode.html">LightRenderMode</a></li>
+          <li class="enumRuntime"><a href="LightShadows.html">LightShadows</a></li>
+          <li class="enumRuntime"><a href="LightType.html">LightType</a></li>
+          <li class="enumRuntime"><a href="LocationServiceStatus.html">LocationServiceStatus</a></li>
+          <li class="enumRuntime"><a href="LogType.html">LogType</a></li>
+          <li class="enumRuntime"><a href="MasterServerEvent.html">MasterServerEvent</a></li>
+          <li class="enumRuntime"><a href="MaterialProperty.PropFlags.html">MaterialProperty.PropFlags</a></li>
+          <li class="enumRuntime"><a href="MaterialProperty.PropType.html">MaterialProperty.PropType</a></li>
+          <li class="enumRuntime"><a href="MaterialProperty.TexDim.html">MaterialProperty.TexDim</a></li>
+          <li class="enumRuntime"><a href="Media.MediaState.html">Media.MediaState</a></li>
+          <li class="enumRuntime"><a href="MeshTopology.html">MeshTopology</a></li>
+          <li class="enumRuntime"><a href="Message.Severity.html">Message.Severity</a></li>
+          <li class="enumRuntime"><a href="NavMeshPathStatus.html">NavMeshPathStatus</a></li>
+          <li class="enumRuntime"><a href="NetworkConnectionError.html">NetworkConnectionError</a></li>
+          <li class="enumRuntime"><a href="NetworkDisconnection.html">NetworkDisconnection</a></li>
+          <li class="enumRuntime"><a href="NetworkLogLevel.html">NetworkLogLevel</a></li>
+          <li class="enumRuntime"><a href="NetworkPeerType.html">NetworkPeerType</a></li>
+          <li class="enumRuntime"><a href="NetworkReachability.html">NetworkReachability</a></li>
+          <li class="enumRuntime"><a href="NetworkStateSynchronization.html">NetworkStateSynchronization</a></li>
+          <li class="enumRuntime"><a href="NPOTSupport.html">NPOTSupport</a></li>
+          <li class="enumRuntime"><a href="ObstacleAvoidanceType.html">ObstacleAvoidanceType</a></li>
+          <li class="enumRuntime"><a href="OffMeshLinkType.html">OffMeshLinkType</a></li>
+          <li class="enumRuntime"><a href="Packer.Execution.html">Packer.Execution</a></li>
+          <li class="enumRuntime"><a href="ParticleRenderMode.html">ParticleRenderMode</a></li>
+          <li class="enumRuntime"><a href="ParticleSystemRenderMode.html">ParticleSystemRenderMode</a></li>
+          <li class="enumRuntime"><a href="ParticleSystemSimulationSpace.html">ParticleSystemSimulationSpace</a></li>
+          <li class="enumRuntime"><a href="PhysicMaterialCombine.html">PhysicMaterialCombine</a></li>
+          <li class="enumRuntime"><a href="PlayerSettings.MetroCompilationOverrides.html">PlayerSettings.MetroCompilationOverrides</a></li>
+          <li class="enumRuntime"><a href="PlayMode.html">PlayMode</a></li>
+          <li class="enumRuntime"><a href="PrimitiveType.html">PrimitiveType</a></li>
+          <li class="enumRuntime"><a href="ProceduralCacheSize.html">ProceduralCacheSize</a></li>
+          <li class="enumRuntime"><a href="ProceduralLoadingBehavior.html">ProceduralLoadingBehavior</a></li>
+          <li class="enumRuntime"><a href="ProceduralOutputType.html">ProceduralOutputType</a></li>
+          <li class="enumRuntime"><a href="ProceduralProcessorUsage.html">ProceduralProcessorUsage</a></li>
+          <li class="enumRuntime"><a href="ProceduralPropertyType.html">ProceduralPropertyType</a></li>
+          <li class="enumRuntime"><a href="QueueMode.html">QueueMode</a></li>
+          <li class="enumRuntime"><a href="RemoteNotificationType.html">RemoteNotificationType</a></li>
+          <li class="enumRuntime"><a href="Rendering.BlendMode.html">Rendering.BlendMode</a></li>
+          <li class="enumRuntime"><a href="Rendering.BlendOp.html">Rendering.BlendOp</a></li>
+          <li class="enumRuntime"><a href="Rendering.ColorWriteMask.html">Rendering.ColorWriteMask</a></li>
+          <li class="enumRuntime"><a href="Rendering.CompareFunction.html">Rendering.CompareFunction</a></li>
+          <li class="enumRuntime"><a href="Rendering.CullMode.html">Rendering.CullMode</a></li>
+          <li class="enumRuntime"><a href="Rendering.StencilOp.html">Rendering.StencilOp</a></li>
+          <li class="enumRuntime"><a href="RenderingPath.html">RenderingPath</a></li>
+          <li class="enumRuntime"><a href="RenderTextureFormat.html">RenderTextureFormat</a></li>
+          <li class="enumRuntime"><a href="RenderTextureReadWrite.html">RenderTextureReadWrite</a></li>
+          <li class="enumRuntime"><a href="RigidbodyConstraints.html">RigidbodyConstraints</a></li>
+          <li class="enumRuntime"><a href="RigidbodyInterpolation.html">RigidbodyInterpolation</a></li>
+          <li class="enumRuntime"><a href="RigidbodyInterpolation2D.html">RigidbodyInterpolation2D</a></li>
+          <li class="enumRuntime"><a href="RigidbodySleepMode2D.html">RigidbodySleepMode2D</a></li>
+          <li class="enumRuntime"><a href="RotationDriveMode.html">RotationDriveMode</a></li>
+          <li class="enumRuntime"><a href="RPCMode.html">RPCMode</a></li>
+          <li class="enumRuntime"><a href="RuntimePlatform.html">RuntimePlatform</a></li>
+          <li class="enumRuntime"><a href="ScaleMode.html">ScaleMode</a></li>
+          <li class="enumRuntime"><a href="ScreenOrientation.html">ScreenOrientation</a></li>
+          <li class="enumRuntime"><a href="SearchableEditorWindow.SearchMode.html">SearchableEditorWindow.SearchMode</a></li>
+          <li class="enumRuntime"><a href="SearchableEditorWindow.SearchModeHierarchyWindow.html">SearchableEditorWindow.SearchModeHierarchyWindow</a></li>
+          <li class="enumRuntime"><a href="SearchFilter.SearchArea.html">SearchFilter.SearchArea</a></li>
+          <li class="enumRuntime"><a href="SearchFilter.State.html">SearchFilter.State</a></li>
+          <li class="enumRuntime"><a href="SendMessageOptions.html">SendMessageOptions</a></li>
+          <li class="enumRuntime"><a href="ShaderUtil.ShaderPropertyTexDim.html">ShaderUtil.ShaderPropertyTexDim</a></li>
+          <li class="enumRuntime"><a href="ShaderUtil.ShaderPropertyType.html">ShaderUtil.ShaderPropertyType</a></li>
+          <li class="enumRuntime"><a href="ShadowProjection.html">ShadowProjection</a></li>
+          <li class="enumRuntime"><a href="SkinQuality.html">SkinQuality</a></li>
+          <li class="enumRuntime"><a href="SocialPlatforms.TimeScope.html">SocialPlatforms.TimeScope</a></li>
+          <li class="enumRuntime"><a href="SocialPlatforms.UserScope.html">SocialPlatforms.UserScope</a></li>
+          <li class="enumRuntime"><a href="SocialPlatforms.UserState.html">SocialPlatforms.UserState</a></li>
+          <li class="enumRuntime"><a href="Space.html">Space</a></li>
+          <li class="enumRuntime"><a href="SpriteAlignment.html">SpriteAlignment</a></li>
+          <li class="enumRuntime"><a href="SpriteMeshType.html">SpriteMeshType</a></li>
+          <li class="enumRuntime"><a href="SpritePackingMode.html">SpritePackingMode</a></li>
+          <li class="enumRuntime"><a href="SpritePackingRotation.html">SpritePackingRotation</a></li>
+          <li class="enumRuntime"><a href="SystemLanguage.html">SystemLanguage</a></li>
+          <li class="enumRuntime"><a href="TerrainRenderFlags.html">TerrainRenderFlags</a></li>
+          <li class="enumRuntime"><a href="TextAlignment.html">TextAlignment</a></li>
+          <li class="enumRuntime"><a href="TextAnchor.html">TextAnchor</a></li>
+          <li class="enumRuntime"><a href="TextClipping.html">TextClipping</a></li>
+          <li class="enumRuntime"><a href="TextEditor.DblClickSnapping.html">TextEditor.DblClickSnapping</a></li>
+          <li class="enumRuntime"><a href="TextureCompressionQuality.html">TextureCompressionQuality</a></li>
+          <li class="enumRuntime"><a href="TextureFormat.html">TextureFormat</a></li>
+          <li class="enumRuntime"><a href="TextureWrapMode.html">TextureWrapMode</a></li>
+          <li class="enumRuntime"><a href="ThreadPriority.html">ThreadPriority</a></li>
+          <li class="enumRuntime"><a href="TouchPhase.html">TouchPhase</a></li>
+          <li class="enumRuntime"><a href="TouchScreenKeyboardType.html">TouchScreenKeyboardType</a></li>
+          <li class="enumRuntime"><a href="TransparencySortMode.html">TransparencySortMode</a></li>
+          <li class="enumRuntime"><a href="TreeEditorHelper.NodeType.html">TreeEditorHelper.NodeType</a></li>
+          <li class="enumRuntime"><a href="TreeGroup.BuildFlag.html">TreeGroup.BuildFlag</a></li>
+          <li class="enumRuntime"><a href="TreeGroup.DistributionMode.html">TreeGroup.DistributionMode</a></li>
+          <li class="enumRuntime"><a href="TreeGroup.LockFlag.html">TreeGroup.LockFlag</a></li>
+          <li class="enumRuntime"><a href="TreeGroupBranch.GeometryMode.html">TreeGroupBranch.GeometryMode</a></li>
+          <li class="enumRuntime"><a href="TreeGroupLeaf.GeometryMode.html">TreeGroupLeaf.GeometryMode</a></li>
+          <li class="enumRuntime"><a href="UserAuthorization.html">UserAuthorization</a></li>
+          <li class="enumRuntime"><a href="WrapMode.html">WrapMode</a></li>
+          <li class="enumRuntime"><a href="WSA.Folder.html">WSA.Folder</a></li>
+          <li class="enumRuntime"><a href="WSA.TileForegroundText.html">WSA.TileForegroundText</a></li>
+          <li class="enumRuntime"><a href="WSA.TileTemplate.html">WSA.TileTemplate</a></li>
+          <li class="enumRuntime"><a href="WSA.ToastTemplate.html">WSA.ToastTemplate</a></li>
+          <li class="enumRuntime"><a href="WSA.WindowActivationState.html">WSA.WindowActivationState</a></li>
+          <li class="attrRuntime"><a href="AddComponentMenu.html">AddComponentMenu</a></li>
+          <li class="attrRuntime"><a href="ContextMenu.html">ContextMenu</a></li>
+          <li class="attrRuntime"><a href="ExecuteInEditMode.html">ExecuteInEditMode</a></li>
+          <li class="attrRuntime"><a href="HideInInspector.html">HideInInspector</a></li>
+          <li class="attrRuntime"><a href="ImageEffectOpaque.html">ImageEffectOpaque</a></li>
+          <li class="attrRuntime"><a href="ImageEffectTransformsToLDR.html">ImageEffectTransformsToLDR</a></li>
+          <li class="attrRuntime"><a href="NotConvertedAttribute.html">NotConvertedAttribute</a></li>
+          <li class="attrRuntime"><a href="NotFlashValidatedAttribute.html">NotFlashValidatedAttribute</a></li>
+          <li class="attrRuntime"><a href="NotRenamedAttribute.html">NotRenamedAttribute</a></li>
+          <li class="attrRuntime"><a href="PropertyAttribute.html">PropertyAttribute</a></li>
+          <li class="attrRuntime"><a href="RequireComponent.html">RequireComponent</a></li>
+          <li class="attrRuntime"><a href="RPC.html">RPC</a></li>
+          <li class="attrRuntime"><a href="SerializeField.html">SerializeField</a></li>
+          <li class="classEditor"><a href="AnimationClipCurveData.html">AnimationClipCurveData</a></li>
+          <li class="classEditor"><a href="AnimationMode.html">AnimationMode</a></li>
+          <li class="classEditor"><a href="AnimationUtility.html">AnimationUtility</a></li>
+          <li class="classEditor"><a href="ArrayUtility.html">ArrayUtility</a></li>
+          <li class="classEditor"><a href="AssetDatabase.html">AssetDatabase</a></li>
+          <li class="classEditor"><a href="AssetImporter.html">AssetImporter</a><ul class="left-submenu">
+      <li class="classEditor"><a href="AudioImporter.html">AudioImporter</a></li>
+      <li class="classEditor"><a href="ModelImporter.html">ModelImporter</a></li>
+      <li class="classEditor"><a href="MovieImporter.html">MovieImporter</a></li>
+      <li class="classEditor"><a href="SubstanceImporter.html">SubstanceImporter</a></li>
+      <li class="classEditor"><a href="TextureImporter.html">TextureImporter</a></li>
+      <li class="classEditor"><a href="TrueTypeFontImporter.html">TrueTypeFontImporter</a></li>
+    </ul>
+          </li>
+          <li class="classEditor"><a href="AssetModificationProcessor.html">AssetModificationProcessor</a></li>
+          <li class="classEditor"><a href="AssetPostprocessor.html">AssetPostprocessor</a></li>
+          <li class="classEditor"><a href="BuildPipeline.html">BuildPipeline</a></li>
+          <li class="classEditor"><a href="DragAndDrop.html">DragAndDrop</a></li>
+          <li class="classEditor"><a href="Editor.html">Editor</a><ul class="left-submenu">
+      <li class="classEditor"><a href="MaterialEditor.html">MaterialEditor</a></li>
+    </ul>
+          </li>
+          <li class="classEditor"><a href="EditorApplication.html">EditorApplication</a></li>
+          <li class="classEditor"><a href="EditorGUI.html">EditorGUI</a></li>
+          <li class="classEditor"><a href="EditorGUILayout.html">EditorGUILayout</a></li>
+          <li class="classEditor"><a href="EditorGUIUtility.html">EditorGUIUtility</a></li>
+          <li class="classEditor"><a href="EditorPrefs.html">EditorPrefs</a></li>
+          <li class="classEditor"><a href="EditorStyles.html">EditorStyles</a></li>
+          <li class="classEditor"><a href="EditorUtility.html">EditorUtility</a></li>
+          <li class="classEditor"><a href="EditorWindow.html">EditorWindow</a><ul class="left-submenu">
+      <li class="classEditor"><a href="ScriptableWizard.html">ScriptableWizard</a></li>
+    </ul>
+          </li>
+          <li class="classEditor"><a href="FileUtil.html">FileUtil</a></li>
+          <li class="classEditor"><a href="GameObjectUtility.html">GameObjectUtility</a></li>
+          <li class="classEditor"><a href="GenericMenu.html">GenericMenu</a></li>
+          <li class="classEditor"><a href="Handles.html">Handles</a></li>
+          <li class="classEditor"><a href="HandleUtility.html">HandleUtility</a></li>
+          <li class="classEditor"><a href="Help.html">Help</a></li>
+          <li class="classEditor"><a href="Highlighter.html">Highlighter</a></li>
+          <li class="classEditor"><a href="LightmapEditorSettings.html">LightmapEditorSettings</a></li>
+          <li class="classEditor"><a href="Lightmapping.html">Lightmapping</a></li>
+          <li class="classEditor"><a href="LODUtility.html">LODUtility</a></li>
+          <li class="classEditor"><a href="MaterialProperty.html">MaterialProperty</a></li>
+          <li class="classEditor"><a href="MaterialPropertyDrawer.html">MaterialPropertyDrawer</a></li>
+          <li class="classEditor"><a href="MenuCommand.html">MenuCommand</a></li>
+          <li class="classEditor"><a href="MeshUtility.html">MeshUtility</a></li>
+          <li class="classEditor"><a href="ModelImporterClipAnimation.html">ModelImporterClipAnimation</a></li>
+          <li class="classEditor"><a href="MonoScript.html">MonoScript</a></li>
+          <li class="classEditor"><a href="NavMeshBuilder.html">NavMeshBuilder</a></li>
+          <li class="classEditor"><a href="ObjectNames.html">ObjectNames</a></li>
+          <li class="classEditor"><a href="PlayerSettings.html">PlayerSettings</a></li>
+          <li class="classEditor"><a href="PrefabUtility.html">PrefabUtility</a></li>
+          <li class="classEditor"><a href="PropertyDrawer.html">PropertyDrawer</a></li>
+          <li class="classEditor"><a href="PropertyModification.html">PropertyModification</a></li>
+          <li class="classEditor"><a href="Selection.html">Selection</a></li>
+          <li class="classEditor"><a href="SerializedObject.html">SerializedObject</a></li>
+          <li class="classEditor"><a href="SerializedProperty.html">SerializedProperty</a></li>
+          <li class="classEditor"><a href="ShaderUtil.html">ShaderUtil</a></li>
+          <li class="classEditor"><a href="SpriteMetaData.html">SpriteMetaData</a></li>
+          <li class="classEditor"><a href="Sprites.AtlasSettings.html">Sprites.AtlasSettings</a></li>
+          <li class="classEditor"><a href="Sprites.IPackerPolicy.html">Sprites.IPackerPolicy</a></li>
+          <li class="classEditor"><a href="StaticOcclusionCulling.html">StaticOcclusionCulling</a></li>
+          <li class="classEditor"><a href="StaticOcclusionCullingVisualization.html">StaticOcclusionCullingVisualization</a></li>
+          <li class="classEditor"><a href="SubstanceArchive.html">SubstanceArchive</a></li>
+          <li class="classEditor"><a href="TextureImporterSettings.html">TextureImporterSettings</a></li>
+          <li class="classEditor"><a href="Tools.html">Tools</a></li>
+          <li class="classEditor"><a href="Undo.html">Undo</a></li>
+          <li class="classEditor"><a href="UndoPropertyModification.html">UndoPropertyModification</a></li>
+          <li class="classEditor"><a href="UnwrapParam.html">UnwrapParam</a></li>
+          <li class="classEditor"><a href="Unwrapping.html">Unwrapping</a></li>
+          <li class="classEditor"><a href="VersionControl.Asset.html">VersionControl.Asset</a></li>
+          <li class="classEditor"><a href="VersionControl.AssetList.html">VersionControl.AssetList</a></li>
+          <li class="classEditor"><a href="VersionControl.ChangeSet.html">VersionControl.ChangeSet</a></li>
+          <li class="classEditor"><a href="VersionControl.ChangeSets.html">VersionControl.ChangeSets</a></li>
+          <li class="classEditor"><a href="VersionControl.ConfigField.html">VersionControl.ConfigField</a></li>
+          <li class="classEditor"><a href="VersionControl.Plugin.html">VersionControl.Plugin</a></li>
+          <li class="classEditor"><a href="VersionControl.Provider.html">VersionControl.Provider</a></li>
+          <li class="classEditor"><a href="VersionControl.Task.html">VersionControl.Task</a></li>
+          <li class="enumEditor"><a href="AndroidBuildSubtarget.html">AndroidBuildSubtarget</a></li>
+          <li class="enumEditor"><a href="AndroidPreferredInstallLocation.html">AndroidPreferredInstallLocation</a></li>
+          <li class="enumEditor"><a href="AndroidSdkVersions.html">AndroidSdkVersions</a></li>
+          <li class="enumEditor"><a href="AndroidShowActivityIndicatorOnLoading.html">AndroidShowActivityIndicatorOnLoading</a></li>
+          <li class="enumEditor"><a href="AndroidSplashScreenScale.html">AndroidSplashScreenScale</a></li>
+          <li class="enumEditor"><a href="AndroidTargetDevice.html">AndroidTargetDevice</a></li>
+          <li class="enumEditor"><a href="ApiCompatibilityLevel.html">ApiCompatibilityLevel</a></li>
+          <li class="enumEditor"><a href="AspectRatio.html">AspectRatio</a></li>
+          <li class="enumEditor"><a href="AssetDeleteResult.html">AssetDeleteResult</a></li>
+          <li class="enumEditor"><a href="AssetMoveResult.html">AssetMoveResult</a></li>
+          <li class="enumEditor"><a href="AudioImporterFormat.html">AudioImporterFormat</a></li>
+          <li class="enumEditor"><a href="AudioImporterLoadType.html">AudioImporterLoadType</a></li>
+          <li class="enumEditor"><a href="BlackBerryBuildSubtarget.html">BlackBerryBuildSubtarget</a></li>
+          <li class="enumEditor"><a href="BlackBerryBuildType.html">BlackBerryBuildType</a></li>
+          <li class="enumEditor"><a href="BodyPart.html">BodyPart</a></li>
+          <li class="enumEditor"><a href="BoneState.html">BoneState</a></li>
+          <li class="enumEditor"><a href="BuildAssetBundleOptions.html">BuildAssetBundleOptions</a></li>
+          <li class="enumEditor"><a href="BuildOptions.html">BuildOptions</a></li>
+          <li class="enumEditor"><a href="BuildTarget.html">BuildTarget</a></li>
+          <li class="enumEditor"><a href="BuildTargetGroup.html">BuildTargetGroup</a></li>
+          <li class="enumEditor"><a href="ClipAnimationMaskType.html">ClipAnimationMaskType</a></li>
+          <li class="enumEditor"><a href="DragAndDropVisualMode.html">DragAndDropVisualMode</a></li>
+          <li class="enumEditor"><a href="DrawCameraMode.html">DrawCameraMode</a></li>
+          <li class="enumEditor"><a href="EditorBehaviorMode.html">EditorBehaviorMode</a></li>
+          <li class="enumEditor"><a href="EditorSkin.html">EditorSkin</a></li>
+          <li class="enumEditor"><a href="ExportPackageOptions.html">ExportPackageOptions</a></li>
+          <li class="enumEditor"><a href="FlashBuildSubtarget.html">FlashBuildSubtarget</a></li>
+          <li class="enumEditor"><a href="FontRenderingMode.html">FontRenderingMode</a></li>
+          <li class="enumEditor"><a href="FontTextureCase.html">FontTextureCase</a></li>
+          <li class="enumEditor"><a href="GameViewSizeGroupType.html">GameViewSizeGroupType</a></li>
+          <li class="enumEditor"><a href="GizmoType.html">GizmoType</a></li>
+          <li class="enumEditor"><a href="HighlightSearchMode.html">HighlightSearchMode</a></li>
+          <li class="enumEditor"><a href="IconDrawStyle.html">IconDrawStyle</a></li>
+          <li class="enumEditor"><a href="ImportAssetOptions.html">ImportAssetOptions</a></li>
+          <li class="enumEditor"><a href="iOSSdkVersion.html">iOSSdkVersion</a></li>
+          <li class="enumEditor"><a href="iOSShowActivityIndicatorOnLoading.html">iOSShowActivityIndicatorOnLoading</a></li>
+          <li class="enumEditor"><a href="iOSStatusBarStyle.html">iOSStatusBarStyle</a></li>
+          <li class="enumEditor"><a href="iOSTargetDevice.html">iOSTargetDevice</a></li>
+          <li class="enumEditor"><a href="iOSTargetOSVersion.html">iOSTargetOSVersion</a></li>
+          <li class="enumEditor"><a href="iOSTargetResolution.html">iOSTargetResolution</a></li>
+          <li class="enumEditor"><a href="LightmapBakeQuality.html">LightmapBakeQuality</a></li>
+          <li class="enumEditor"><a href="MacFullscreenMode.html">MacFullscreenMode</a></li>
+          <li class="enumEditor"><a href="MessageType.html">MessageType</a></li>
+          <li class="enumEditor"><a href="MetroSDK.html">MetroSDK</a></li>
+          <li class="enumEditor"><a href="ModelImporterAnimationCompression.html">ModelImporterAnimationCompression</a></li>
+          <li class="enumEditor"><a href="ModelImporterAnimationType.html">ModelImporterAnimationType</a></li>
+          <li class="enumEditor"><a href="ModelImporterGenerateAnimations.html">ModelImporterGenerateAnimations</a></li>
+          <li class="enumEditor"><a href="ModelImporterMaterialName.html">ModelImporterMaterialName</a></li>
+          <li class="enumEditor"><a href="ModelImporterMaterialSearch.html">ModelImporterMaterialSearch</a></li>
+          <li class="enumEditor"><a href="ModelImporterMeshCompression.html">ModelImporterMeshCompression</a></li>
+          <li class="enumEditor"><a href="ModelImporterTangentSpaceMode.html">ModelImporterTangentSpaceMode</a></li>
+          <li class="enumEditor"><a href="MouseCursor.html">MouseCursor</a></li>
+          <li class="enumEditor"><a href="PivotMode.html">PivotMode</a></li>
+          <li class="enumEditor"><a href="PivotRotation.html">PivotRotation</a></li>
+          <li class="enumEditor"><a href="PrefabType.html">PrefabType</a></li>
+          <li class="enumEditor"><a href="PS3BuildSubtarget.html">PS3BuildSubtarget</a></li>
+          <li class="enumEditor"><a href="RemoveAssetOptions.html">RemoveAssetOptions</a></li>
+          <li class="enumEditor"><a href="ReplacePrefabOptions.html">ReplacePrefabOptions</a></li>
+          <li class="enumEditor"><a href="ResolutionDialogSetting.html">ResolutionDialogSetting</a></li>
+          <li class="enumEditor"><a href="SaveType.html">SaveType</a></li>
+          <li class="enumEditor"><a href="ScriptCallOptimizationLevel.html">ScriptCallOptimizationLevel</a></li>
+          <li class="enumEditor"><a href="SelectionMode.html">SelectionMode</a></li>
+          <li class="enumEditor"><a href="SerializedPropertyType.html">SerializedPropertyType</a></li>
+          <li class="enumEditor"><a href="SpriteImportMode.html">SpriteImportMode</a></li>
+          <li class="enumEditor"><a href="SpritePackerMode.html">SpritePackerMode</a></li>
+          <li class="enumEditor"><a href="StaticEditorFlags.html">StaticEditorFlags</a></li>
+          <li class="enumEditor"><a href="StrippingLevel.html">StrippingLevel</a></li>
+          <li class="enumEditor"><a href="TargetGlesGraphics.html">TargetGlesGraphics</a></li>
+          <li class="enumEditor"><a href="TextureImporterFormat.html">TextureImporterFormat</a></li>
+          <li class="enumEditor"><a href="TextureImporterGenerateCubemap.html">TextureImporterGenerateCubemap</a></li>
+          <li class="enumEditor"><a href="TextureImporterMipFilter.html">TextureImporterMipFilter</a></li>
+          <li class="enumEditor"><a href="TextureImporterNormalFilter.html">TextureImporterNormalFilter</a></li>
+          <li class="enumEditor"><a href="TextureImporterNPOTScale.html">TextureImporterNPOTScale</a></li>
+          <li class="enumEditor"><a href="TextureImporterType.html">TextureImporterType</a></li>
+          <li class="enumEditor"><a href="Tool.html">Tool</a></li>
+          <li class="enumEditor"><a href="UIOrientation.html">UIOrientation</a></li>
+          <li class="enumEditor"><a href="VersionControl.CheckoutMode.html">VersionControl.CheckoutMode</a></li>
+          <li class="enumEditor"><a href="VersionControl.CompletionAction.html">VersionControl.CompletionAction</a></li>
+          <li class="enumEditor"><a href="VersionControl.FileMode.html">VersionControl.FileMode</a></li>
+          <li class="enumEditor"><a href="VersionControl.MergeMethod.html">VersionControl.MergeMethod</a></li>
+          <li class="enumEditor"><a href="VersionControl.OnlineState.html">VersionControl.OnlineState</a></li>
+          <li class="enumEditor"><a href="VersionControl.ResolveMethod.html">VersionControl.ResolveMethod</a></li>
+          <li class="enumEditor"><a href="VersionControl.RevertMode.html">VersionControl.RevertMode</a></li>
+          <li class="enumEditor"><a href="VersionControl.SubmitResult.html">VersionControl.SubmitResult</a></li>
+          <li class="enumEditor"><a href="ViewTool.html">ViewTool</a></li>
+          <li class="enumEditor"><a href="WiiBuildDebugLevel.html">WiiBuildDebugLevel</a></li>
+          <li class="enumEditor"><a href="WiiBuildSubtarget.html">WiiBuildSubtarget</a></li>
+          <li class="enumEditor"><a href="WiiHio2Usage.html">WiiHio2Usage</a></li>
+          <li class="enumEditor"><a href="WiiRegion.html">WiiRegion</a></li>
+          <li class="enumEditor"><a href="XboxBuildSubtarget.html">XboxBuildSubtarget</a></li>
+          <li class="enumEditor"><a href="XboxRunMethod.html">XboxRunMethod</a></li>
+          <li class="attrEditor"><a href="CallbackOrderAttribute.html">CallbackOrderAttribute</a></li>
+          <li class="attrEditor"><a href="CanEditMultipleObjects.html">CanEditMultipleObjects</a></li>
+          <li class="attrEditor"><a href="CustomEditor.html">CustomEditor</a></li>
+          <li class="attrEditor"><a href="CustomPropertyDrawer.html">CustomPropertyDrawer</a></li>
+          <li class="attrEditor"><a href="DrawGizmo.html">DrawGizmo</a></li>
+          <li class="attrEditor"><a href="InitializeOnLoadAttribute.html">InitializeOnLoadAttribute</a></li>
+          <li class="attrEditor"><a href="MenuItem.html">MenuItem</a></li>
+          <li class="attrEditor"><a href="PreferenceItem.html">PreferenceItem</a></li>
+        </ul>
+      </div>
+      <div id="mainContainer"><span class="heading"><a href="GUIElement.html">GUIElement</a>.HitTest</span><br><div class="section">
+          <div class="subsection">
+            <div class="sigContainer">
+              <div class="sigBlockJS"><span class="decText"><span class="sigKW">HitTest</span>(<span class="sigKW">screenPosition</span>:
+<a href="Vector3.html">Vector3</a>,
+<span class="sigKW">camera</span>: 
+<a href="Camera.html">Camera</a> = null):
+bool;</span></div>
+              <div class="sigBlockCS"><span class="decText">bool <span class="sigKW">HitTest</span>(<a href="Vector3.html">Vector3 </a><span class="sigKW">screenPosition</span>,
+<a href="Camera.html">Camera </a><span class="sigKW">camera</span> = null);</span></div>
+              <div class="sigBlockBoo"><span class="decText">
+def
+<span class="sigKW">HitTest</span>(<span class="sigKW">screenPosition</span> as <a href="Vector3.html">Vector3</a>,
+ <span class="sigKW">camera</span> as <a href="Camera.html">Camera</a> = null)
+as bool</span></div>
+              <div class="sigBlockJS"><span class="decText"></span></div>
+              <div class="sigBlockCS"><span class="decText"></span></div>
+              <div class="sigBlockBoo"><span class="decText"></span></div>
+            </div>
+          </div>
+          <div class="subsection">
+            <div class="script-section-softheading">Description</div>
+            <p class="first">Is a point on screen inside the element.</p>
+          </div>
+          <div class="subsection">Returns true if the <code class="varname">screenPosition</code> is contained in this GUIElement. <code class="varname">screenPosition</code> is specified in
+screen coordinates, like the values returned by Input.mousePosition property.
+If no <code class="varname">camera</code> is given a camera filling the entire game window will be assumed.<p class="basic"></p>Note that if the position is inside the element, <code class="varname">true</code> will be returned even if
+the game object belongs to Ignore Raycast layer (normally mouse events are not sent
+to Ignore Raycast objects).<p class="basic"></p>See Also: GUILayer.HitTest.</div>
+          <div class="subsection">
+      <pre class="codeExampleJS">	if (guiText.HitTest (<a href="Vector3.html">Vector3</a>(360, 450, 0)))
+		print ("This gui texture covers pixel 360, 450");
+</pre>
+      <pre class="codeExampleCS">using UnityEngine;
+using System.Collections;
+
+public class Example : <a href="MonoBehaviour.html">MonoBehaviour</a> {
+    void Example() {
+        if (guiText.HitTest(new <a href="Vector3.html">Vector3</a>(360, 450, 0)))
+            print("This gui texture covers pixel 360, 450");
+        
+    }
+}
+</pre>
+      <pre class="codeExampleBoo">import UnityEngine
+import System.Collections
+
+public class Example(<a href="MonoBehaviour.html">MonoBehaviour</a>):
+
+	def Example() as void:
+		if guiText.HitTest(<a href="Vector3.html">Vector3</a>(360, 450, 0)):
+			print('This gui texture covers pixel 360, 450')
+
+</pre>
+    </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

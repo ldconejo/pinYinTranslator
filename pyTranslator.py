@@ -141,7 +141,7 @@ for line in response.readlines():
         #print line
 
     f.write(line.encode("UTF-8"))
-    print line
+    #print line
 
 #Close output file
 print "INFO: Conversion completed"
