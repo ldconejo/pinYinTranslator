@@ -1,6 +1,42 @@
 # -*- coding: UTF-8 -*-
-# Created by ldconejo
-# Reads a website in Mandarin
+# Created by ldconejo (luisconej@gmail.com)
+# Reads a website in Mandarin and converts it to Pinyin with
+# with hovering translations in English
+# Version: 0.1
+# Work in progress, no guarantees are provided
+#************************************************************
+# Dictionary
+# CC-CEDICT
+# Community maintained free Chinese-English dictionary.
+#
+# Published by MDBG
+#
+# License:
+# Creative Commons Attribution-Share Alike 3.0
+# http://creativecommons.org/licenses/by-sa/3.0/
+#
+# Referenced works:
+# CEDICT - Copyright (C) 1997, 1998 Paul Andrew Denisowski
+#
+# CC-CEDICT can be downloaded from:
+# http://www.mdbg.net/chindict/chindict.php?page=cc-cedict
+#
+# Additions and corrections can be sent through:
+# http://cc-cedict.org/editor/editor.php
+#
+# For more information about CC-CEDICT see:
+# http://cc-cedict.org/wiki/
+#
+#! version=1
+#! subversion=0
+#! format=ts
+#! charset=UTF-8
+#! entries=110098
+#! publisher=MDBG
+#! license=http://creativecommons.org/licenses/by-sa/3.0/
+#! date=2014-09-24T23:27:27Z
+#! time=1411601247
+#************************************************************
 
 import urllib2
 import re
@@ -59,6 +95,15 @@ def searchRecord(chinese):
 # Uses the Google Translate API to obtain the Pinyin word and English translation of a Chinese character
 #######################################################################################################################
 def searchInWeb(cnChar):
+<<<<<<< HEAD
+=======
+
+    #Proxy setup for translator
+    #gs = goslate.Goslate(opener=opener)
+    #WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
+    #gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN, opener=opener)
+
+>>>>>>> workOnMac
     gs = goslate.Goslate()
     WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
     gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN)
@@ -74,7 +119,12 @@ def searchInWeb(cnChar):
 # hovering text.
 #######################################################################################################################
 def improveDic():
+<<<<<<< HEAD
     dictFile = '/Users/luisconejo/Desktop/cedict_1_0_ts_utf-8_mdbg.txt'
+=======
+    #dictFile = '/Users/luisconejo/Desktop/cedict_1_0_ts_utf-8_mdbg.txt'
+    dictFile = os.getcwd() + '/cedict_ts.u8'
+>>>>>>> workOnMac
     pinyinDict = open(dictFile, 'r')
     #dictLine = pinyinDict.read
 
@@ -85,7 +135,7 @@ def improveDic():
             #print character
             #Now, get the definition for the character
             for definition in re.findall(ur'/.*/', dictLine):
-                definition = re.sub(ur'[//|<|>|\u4e00-\u9fff]', '|', definition)
+                definition = re.sub(ur'[//|<|>|\u4e00-\u9fff]', '\n', definition)
                 updateRecord(character[1], definition)
                 pass
                 #print definition
@@ -116,12 +166,31 @@ try:
 except:
     pass
 
+<<<<<<< HEAD
+=======
+#Proxy setup
+#proxy = urllib2.ProxyHandler({'http': ''})
+#opener = urllib2.build_opener(proxy)
+#urllib2.install_opener(opener)
+
+#Proxy setup for translator
+#gs = goslate.Goslate(opener=opener)
+WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
+gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN) #, opener=opener)
+
+>>>>>>> workOnMac
 WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
 
 gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN)
 
+<<<<<<< HEAD
 response = urllib2.urlopen('http://www.bbc.co.uk/zhongwen/simp')
 
+=======
+#response = urllib2.urlopen('http://www.bbc.co.uk/zhongwen/simp')
+#response = urllib2.urlopen('http://chinesereadingpractice.com/2013/08/05/mr-pigs-picnic/')
+response = urllib2.urlopen('http://www.xinhuanet.com/')
+>>>>>>> workOnMac
 #Create a new file to store the output
 workfile = '/Users/luisconejo/Desktop/test.html'
 f = open(workfile, 'w+')
