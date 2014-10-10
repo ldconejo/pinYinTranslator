@@ -43,6 +43,7 @@ import re
 import goslate
 import sqlite3
 import webbrowser
+import os
 
 #######################################################################################################################
 # Database Functions
@@ -95,15 +96,6 @@ def searchRecord(chinese):
 # Uses the Google Translate API to obtain the Pinyin word and English translation of a Chinese character
 #######################################################################################################################
 def searchInWeb(cnChar):
-<<<<<<< HEAD
-=======
-
-    #Proxy setup for translator
-    #gs = goslate.Goslate(opener=opener)
-    #WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
-    #gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN, opener=opener)
-
->>>>>>> workOnMac
     gs = goslate.Goslate()
     WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
     gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN)
@@ -119,12 +111,7 @@ def searchInWeb(cnChar):
 # hovering text.
 #######################################################################################################################
 def improveDic():
-<<<<<<< HEAD
-    dictFile = '/Users/luisconejo/Desktop/cedict_1_0_ts_utf-8_mdbg.txt'
-=======
-    #dictFile = '/Users/luisconejo/Desktop/cedict_1_0_ts_utf-8_mdbg.txt'
     dictFile = os.getcwd() + '/cedict_ts.u8'
->>>>>>> workOnMac
     pinyinDict = open(dictFile, 'r')
     #dictLine = pinyinDict.read
 
@@ -166,33 +153,15 @@ try:
 except:
     pass
 
-<<<<<<< HEAD
-=======
-#Proxy setup
-#proxy = urllib2.ProxyHandler({'http': ''})
-#opener = urllib2.build_opener(proxy)
-#urllib2.install_opener(opener)
-
-#Proxy setup for translator
-#gs = goslate.Goslate(opener=opener)
-WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
-gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN) #, opener=opener)
-
->>>>>>> workOnMac
 WRITING_NATIVE_AND_ROMAN = (u'trans', u'translit')
 
 gs_roman = goslate.Goslate(WRITING_NATIVE_AND_ROMAN)
 
-<<<<<<< HEAD
+#CHANGE THIS IN ORDER TO USE A DIFFERENT WEBSITE
 response = urllib2.urlopen('http://www.bbc.co.uk/zhongwen/simp')
 
-=======
-#response = urllib2.urlopen('http://www.bbc.co.uk/zhongwen/simp')
-#response = urllib2.urlopen('http://chinesereadingpractice.com/2013/08/05/mr-pigs-picnic/')
-response = urllib2.urlopen('http://www.xinhuanet.com/')
->>>>>>> workOnMac
 #Create a new file to store the output
-workfile = '/Users/luisconejo/Desktop/test.html'
+workfile = 'test.html'
 f = open(workfile, 'w+')
 
 for line in response.readlines():
@@ -218,8 +187,8 @@ f.close()
 
 #Open output file in default browser
 new = 2
-url = 'file:///Users/luisconejo/Desktop/test.html'
-
-webbrowser.open(url,new=new)
-
+url = 'file:///' + os.getcwd() + '/test.html'
+print url
+finalRes = webbrowser.open(url, new=new)
+print finalRes
 #improveDic()
